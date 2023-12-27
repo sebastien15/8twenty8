@@ -20,6 +20,7 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+	<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,4 +30,23 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-	
+<header class="flex justify-between items-center py-4 px-6">
+		<img src="<?= get_template_directory_uri(); ?>/images/logo.svg" alt="Logo" class="w-76" />
+		<nav class="flex-grow">
+			<ul class="flex justify-center space-x-4 text-lg">
+				<li>
+					<a href="./event-planning-template.php" class="text-[#49413D] hover:text-gray-900">Event Planning</a>
+				</li>
+				<li>
+					<a href="./interior-design-template.php" class="text-[#49413D] hover:text-gray-900">Interior Design</a>
+				</li>
+			</ul>
+		</nav>
+		<nav>
+			<ul class="flex space-x-4 text-lg">
+				<li>
+					<a href="./contact-us-template.php" class="text-[#49413D] hover:text-gray-900">Contact Us</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
