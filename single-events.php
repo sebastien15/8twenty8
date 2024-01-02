@@ -13,12 +13,12 @@ get_header();
           <p>Back</p>
         </div>
 
-        <div class="flex justify-between">
-          <div class="w-5/12">
+        <div class="single-event flex justify-between">
+          <div class="single-event-wrapper w-5/12">
             <img class="w-full" src="<?= get_the_post_thumbnail_url(); ?>" />
           </div>
 
-          <div class="w-6/12">
+          <div class="single-event-wrapper w-6/12">
             <h1 class="event-title pb-5"><?= the_title(); ?></h1>
             <p>
               <?= the_content(); ?>

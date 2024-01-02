@@ -10,7 +10,7 @@ License URI: LICENSE
 Text Domain: twenty8
 */
 .event-container {
-  margin-top: 200px;
+  margin-top: 7% !important;
 }
 .banner {
   border-radius: 20px;
@@ -298,9 +298,10 @@ Text Domain: twenty8
 /* contact us section  */
 
 .contact-us {
-  /* padding-block: 40px; */
-  /* margin-top: 100px; */
-}
+  padding-block: 40px;
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;}
 
 .contact-content {
   display: flex;
@@ -403,9 +404,28 @@ p {
   font-weight: 500;
   line-height: normal;
 }
+
+.section-text-roundimage{
+  position: absolute;
+    width: 16% !important;
+    top: 17% !important;
+    right: 5% !important;
+}
+
+
+
+
 /* Reponsiviness on mobile views */
 
 @media screen and (max-width: 600px) {
+
+  .single-event{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .single-event-wrapper{
+    width: auto !important;
+  }
   /* Home section */
   .home-container {
     display: flex;
@@ -463,7 +483,6 @@ p {
     width: 100%;
     margin-top: 20px;
   }
-
   /* process-content */
   .our-process {
     margin-top: 20px;
@@ -537,17 +556,82 @@ p {
     flex-direction: column !important;
     margin-top: 20px;
   }
-  .stats {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+ 
 
     p {
       margin-top: 20px;
     }
-    h2 {
-      font-size: 45px;
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      p{
+        margin-top: 20px;
+      }
+      h2{
+        font-size: 45px;
+      }
     }
+
+    /* contact-section */
+    .contact-section{
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .contact-details{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .contact-us {
+      margin-top: 0;
+      padding-block: 8px;
+
+      p{
+        font-size: 25px;
+      }
+    }
+    .contact-Whatsapp {
+      margin-top: 0;
+      padding-block: 8px;
+
+      p{
+        font-size: 25px;
+      }
+    }
+
+    /* footer-wrapper */
+    .footer-wrapper{
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      img{
+        transform: rotate(360deg);
+      }
+    }
+
+
+    /* Event planning css */
+    .event-container{
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      width: 100% !important;
+    }
+    .main-text{
+      font-size: 42px;
+    }
+  
+    .event-text img{
+      transform: rotate(360deg);
+    }
+  
+
+  .events-section .event-row{
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
   }
 
   /* contact-section */
@@ -586,6 +670,13 @@ p {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  .single-event{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .single-event-wrapper{
+    width: auto !important;
+  }
   .section-text-title,
   .section-text-title span,
   .section-text-desc,
@@ -698,9 +789,48 @@ p {
   }
 
   /* contact-section */
-  .contact-section {
-    margin-left: 20px;
-    margin-right: 20px;
+    .contact-section{
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .contact-details{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .contact-us {
+      margin-top: 0;
+      padding-block: 8px;
+
+      p{
+        font-size: 25px;
+      }
+    }
+    .contact-Whatsapp {
+      margin-top: 0;
+      padding-block: 8px;
+
+      p{
+        font-size: 25px;
+      }
+    }
+
+
+    .event-container {
+      width: 100% !important;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    .event-row{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 0px;
+    }
+    .event-text img{
+      transform: rotate(360deg);
+    }
+
   }
   .contact-details {
     display: flex;
