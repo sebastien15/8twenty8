@@ -12,7 +12,7 @@
 ?>
 
 	<footer class="footer-section mt-20">
-      <div class="mx-auto flex w-9/12 m-auto items-center justify-between py-16 ">
+      <div class="footer-wrapper mx-auto flex w-9/12 m-auto items-center justify-between py-16 ">
         <img src="<?= get_template_directory_uri(); ?>/assets/Logo.svg" />
         <div class="social-icons flex gap-2">
           <a href="" class=""><img src="<?= get_template_directory_uri(); ?>/assets/whatsapp.svg" /></a>
