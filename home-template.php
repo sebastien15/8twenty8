@@ -6,7 +6,7 @@ get_header();
 
 <hr class="border-[#49413D]" />
 
-<!-- 
+
 <div class="flex gap-[30px] w-full">
     <section class="text-[88px] text-[#49413D] relative">
         <p>Unveiling your <span class="text-[#004F52]">Dreams</span></p>
@@ -17,7 +17,7 @@ get_header();
     <section>
         <img src="<?= get_template_directory_uri(); ?>/images/chair.svg" alt="chair" class="h-full w-full" />
     </section>
-</div> -->
+</div>
 
 
 <div class="flex justify-center my-20">
@@ -179,10 +179,11 @@ get_header();
       </div>
     </section>
 
-<div class="w-full bg-[#004F52] text-white flex justify-center overflow-hidden mt-[133px] pb-[133px]">
-    <div class="flex justify-between space-x-10 max-w-[1440px] px-60 py-20">
+<div class="w-full bg-[#004F52] text-white flex justify-center overflow-hidden mt-[133px] pb-[133px] testmoney-container  py-20">
+    <h3 class="">What our customers say</h3>
+    <div class="flex justify-between  max-w-[1440px] w-9/12 gap-8">
         <div class="text-center max-w-[]">
-            <img src="<?= get_template_directory_uri(); ?>/images/Janet.svg" alt="Customer 1" class="rounded-md w-60 h-60 mx-auto" />
+            <img src="<?= get_template_directory_uri(); ?>/images/Janet.svg" alt="Customer 1" class="rounded-md w-full h-60 mx-auto" />
             <h2 class="text-2xl mt-4">Mugabekazi Janet</h2>
             <p class="text-sm">Managing partner - ABC Lawyers</p>
             <p class="mt-4 text-[#FFFFFF]">
@@ -192,7 +193,7 @@ get_header();
             </p>
         </div>
         <div class="text-center max-w-[]">
-            <img src="<?= get_template_directory_uri(); ?>/images/James.svg" alt="Customer 2" class="rounded-md w-60 h-60 mx-auto" />
+            <img src="<?= get_template_directory_uri(); ?>/images/James.svg" alt="Customer 2" class="rounded-md w-full h-60 mx-auto" />
             <h2 class="text-2xl mt-4">Mugabekazi Janet</h2>
             <p class="text-sm">Managing partner - ABC Lawyers</p>
             <p class="mt-4 text-[#FFFFFF]">
@@ -202,7 +203,7 @@ get_header();
             </p>
         </div>
         <div class="text-center max-w-[]">
-            <img src="<?= get_template_directory_uri(); ?>/images/cynthia.svg" alt="Customer 3" class="rounded-md w-60 h-60 mx-auto" />
+            <img src="<?= get_template_directory_uri(); ?>/images/cynthia.svg" alt="Customer 3" class="rounded-md w-full h-60 mx-auto" />
             <h2 class="text-2xl mt-4">Mugabekazi Janet</h2>
             <p class="text-sm">Managing partner - ABC Lawyers</p>
             <p class="mt-4 text-[#FFFFFF]">
