@@ -307,3 +307,21 @@ p{
 .footer-section p{
   font-size: 16px;
 }
+
+
+
+
+/* testmony container */
+.testmoney-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testmoney-container h3{
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
