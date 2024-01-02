@@ -9,8 +9,9 @@ get_header();
 
 <div class="flex home-container">
     <section class="section-text">
-        <p class="section-text-title">Unveiling your <span class="text-green">Dreams</span></p>
-        <p class="section-text-desc">Crafting <span class="text-orange">Realities</span></p>
+        <p class="section-text-title">Unveiling your <span class="text-green">Dreams</span>
+            <br/>Crafting <span class="text-orange">Realities</span>
+        </p>
         <img class="section-text-img" src="<?= get_template_directory_uri(); ?>/images/flowers.svg" alt="flowers" class="z-10" />
         <img class="section-text-roundimage" src="<?= get_template_directory_uri(); ?>/images/event-planning.svg" alt="overlay" class="overlay-img" />
     </section>
