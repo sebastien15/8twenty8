@@ -57,37 +57,42 @@ get_header();
 
     <section class="our-process">
       <div class="flex flex-col items-center mx-auto">
-        <h3 class="process-heading">Our Process</h3>
-        <p class="process-description">
-          We can't wait to create something extraordinary for you, with you!
-        </p>
+            <h3 class="process-heading">Our Process</h3>
+            <p class="process-description">
+            We can't wait to create something extraordinary for you, with you!
+            </p>
         <div class="process-content w-9/12 flex gap-5">
-          <div class="process-column">
-            <p>LET’S DISCUSS<br />YOUR PROJECT<br />TODAY!</p>
-          </div>
+            <div class="process-column">
+                <p>LET’S DISCUSS<br />YOUR PROJECT<br />TODAY!</p>
+            </div>
           <div class="bordered-column flex gap-2">
+                <div class="inner-box">
+                    <div class="green-box"><p class="inner-text">1</p></div>              
+                    <p class="inner-text-gray">
+                        Get in touch with<br />our team today
+                    </p>
+                </div>
+                <div class="arrow-container flex">
+                    <img
+                        class="arrow-right-icon"
+                        src="<?= get_template_directory_uri(); ?>/assets/arrow-right.svg"
+                        alt="Arrow Right"
+                    />
+                </div>
+              
             <div class="inner-box">
-              <div class="green-box"><p class="inner-text">1</p></div>              
-              <p class="inner-text-gray">
-                Get in touch with<br />our team today
-              </p>
+                <div class="green-box"><p class="inner-text">2</p></div>              
+                <p class="inner-text-gray">
+                    Our team will get <br /> back to you
+                </p>
             </div>
-            <img
-                class="arrow-right-icon"
-                src="<?= get_template_directory_uri(); ?>/assets/arrow-right.svg"
-                alt="Arrow Right"
-            />
-            <div class="inner-box">
-              <div class="green-box"><p class="inner-text">2</p></div>              
-              <p class="inner-text-gray">
-                Our team will get <br /> back to you
-              </p>
-            </div>
-            <img
-                class="arrow-right-icon"
-                src="<?= get_template_directory_uri(); ?>/assets/arrow-right.svg"
-                alt="Arrow Right"
-            />
+            <div class="arrow-container flex">
+                    <img
+                        class="arrow-right-icon"
+                        src="<?= get_template_directory_uri(); ?>/assets/arrow-right.svg"
+                        alt="Arrow Right"
+                    />
+                </div>
             <div class="inner-box">
               <div class="green-box"><p class="inner-text">3</p></div>              
               <p class="inner-text-gray">
@@ -99,29 +104,31 @@ get_header();
           </div>
         </div>
       </div>
-    </section>
+</section>
 
 
-    <section class="contact-us">
-        <div class=" mx-auto flex flex-col items-center ">
-            <h3 class="contact-section-heading">Contact Us</h3>
-            <p class="contact-section-description">Feel free to reach out to us!</p>
-            <div class="contact-content w-9/12">
-                <div class="contact-column">
-                    <div class="label-text">Email us at:</div>
-                    <div class="contact-info">
-                        <a href="mailto:8twenty8@gmail.com">8twenty8@gmail.com</a>
-                        <img class="arrow-icon" src="<?= get_template_directory_uri(); ?>/assets/arrow-top-right.svg" alt="Arrow Top Right">
-                    </div>
-                </div>
-                <div class="contact-column">
-                    <div class="label-text">WhatsApp us at:</div>
-                    <div class="contact-info second-contact-info">
-                        <a href="https://wa.me/250788000000">+250 788 000 000</a>
-                        <img class="arrow-icon" src="<?= get_template_directory_uri(); ?>/assets/arrow-top-right-yellow.svg" alt="Arrow Top Right">
-                    </div>
-                </div>
-            </div>
+    <section class=" contact-section">
+        <div class="mx-auto flex flex-col items-center">
+          <h3 class="contact-section-heading">Contact Us</h3>
+          <p class="contact-section-description">Feel free to reach out to us!</p>
+          <div class="contact-details flex justify-evenly">
+          <div class="contact-email">
+              <p class="text-[13px] text-[#49413D]">Email us at:</p>
+              <div class="contact-us flex justify-between max-w-[510px]">
+                  <p class="text-[#004F52] text-[40px] mr-9">8twenty8@gmail.com</p>
+                  <img src="<?= get_template_directory_uri(); ?>/images/oblique-arrow-green.svg" alt="email" />
+              </div>
+              <hr class="border-[#49413D]" />
+          </div>
+          <div class="contact-Whatsapp">
+              <p class="text-[13px] text-[#49413D]">Whatsapp us at:</p>
+              <div class="flex justify-between max-w-[510px]">
+                  <p class="text-[#E7A362] text-[40px] mr-9">+250 788 000 000</p>
+                  <img src="<?= get_template_directory_uri(); ?>/images/oblique-arrow-yellow.svg" alt="Whatsapp" />
+              </div>
+              <hr class="border-[#49413D]" />
+          </div>
+        </div>
         </div>
     </section>
 <?php 

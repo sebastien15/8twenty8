@@ -157,7 +157,7 @@ get_header();
           </div>
         </div>
       </div>
-    </section>
+</section>
 
 <div class="board-section w-full bg-[#004F52] text-white flex justify-center overflow-hidden mt-[133px] pb-[133px]">
     <div class="board-members flex justify-between w-9/12 gap-5 max-w-[1440px] py-20">
@@ -221,7 +221,7 @@ get_header();
             <hr class="border-[#49413D]" />
         </div>
     </div>
-</div>
+ </div>
 
 
 <script>
