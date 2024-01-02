@@ -9,14 +9,20 @@ get_header();
 
 <div class="flex home-container">
     <section class="section-text">
-        <p class="section-text-title">Unveiling your <span class="text-green">Dreams</span>
+        <h1 class="section-text-title">Unveiling your <span class="text-green">Dreams</span>
             <br/>Crafting <span class="text-orange">Realities</span>
-        </p>
-        <img class="section-text-img" src="<?= get_template_directory_uri(); ?>/images/flowers.svg" alt="flowers" class="z-10" />
-        <img class="section-text-roundimage" src="<?= get_template_directory_uri(); ?>/images/event-planning.svg" alt="overlay" class="overlay-img" />
+        </h1>
+        <div class="hero-img-container relative">
+            <img class="section-text-img" src="<?= get_template_directory_uri(); ?>/images/flowers.svg" alt="flowers" class="z-10" />
+            <div class="badge absolute transform -translate-y-1/2 top-0 left-auto right-12">
+                <img class="section-text-roundimage " src="<?= get_template_directory_uri(); ?>/images/event-planning.svg" alt="overlay" class="overlay-img" />
+            </div>
+            
+        </div>
+        
     </section>
     <section class="image-container">
-        <img src="<?= get_template_directory_uri(); ?>/images/chair.svg" alt="chair" class="section-img" />
+        <img src="<?= get_template_directory_uri(); ?>/images/chair.svg" alt="chair" class="section-img rounded-3xl object-cover" />
     </section>
 </div>
 
@@ -37,28 +43,28 @@ get_header();
 </div>
 
 
-<div class="stats-container grid grid-cols-4 gap-4 text-center mt-[75px]">
+<div class="stats-container grid grid-cols-4 gap-4 text-center mt-[75px] w-[65%] mx-auto">
     <div class="stats">
-        <h2 class="text-[60px] text-[#E7A362]">30 +</h2>
+        <h2 class="text-[60px] text-[#E7A362]"  id="count1">30 +</h2>
         <p class="text-[20px] text-[#49413D]">
             Interior design <br />
             projects
         </p>
     </div>
     <div class="stats">
-        <h2 class="text-[60px] text-[#E7A362]">20+</h2>
+        <h2 class="text-[60px] text-[#E7A362]"  id="count2">20 +</h2>
         <p class="text-[20px] text-[#49413D]">
             Events planned <br />
             successfully
         </p>
     </div>
     <div class="stats">
-        <h2 class="text-[60px] text-[#E7A362]">20+</h2>
-        <p class="text-[20px] text-[#49413D]">Ongoing project</p>
+        <h2 class="text-[60px] text-[#E7A362]" id="count3">20 +</h2>
+        <p class="text-[20px] text-[#49413D]">Ongoing <br /> project</p>
     </div>
     <div class="stats">
-        <h2 class="text-[60px] text-[#E7A362]">100+</h2>
-        <p class="text-[20px] text-[#49413D]">Happy clients</p>
+        <h2 class="text-[60px] text-[#E7A362]" id="count4">100 +</h2>
+        <p class="text-[20px] text-[#49413D]">Happy <br />clients</p>
     </div>
 </div>
 
@@ -71,17 +77,31 @@ get_header();
             you.
         </p>
     </div>
-    <div class="services-container grid justify-center pb-[126px]">
-        <div class="single-service flex justify-between mt-20 w-[868px]">
-            <img src="<?= get_template_directory_uri(); ?>/images/interior-design.svg" alt="interior design" />
-            <p class="text-[60px]">INTERIOR DESIGN</p>
+    <div class="services-container grid justify-center pb-[126px] px-[20%]">
+        <div class="single-service flex flex-col">
+            <div class="flex justify-between mt-20  p-10">
+                <img src="<?= get_template_directory_uri(); ?>/images/interior-design.svg" alt="interior design" />
+                <p class="text-[60px]">INTERIOR DESIGN</p>
                 <img class="single-service-arrow" class="arrow" src="<?= get_template_directory_uri(); ?>/images/down-arrow-black.svg" alt="arrow-down" />
+
+            </div>
+            
+            <div class="hidden-content hidden text-center">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                <a href="#" class="recent-projects-link flex justify-center gap-2 my-3">Check out our recent projects <img class="arrow-right" src="<?= get_template_directory_uri(); ?>/assets/arrow-right.svg" alt="arrow-right" /></a>
+            </div>
         </div>
         <hr class="border-b-[#49413D] border" />
-        <div class="single-service flex justify-between w-[868px]">
-            <img src="<?= get_template_directory_uri(); ?>/images/cheers.svg" alt="cheers" />
-            <p class="text-[60px]">Service Title</p>
+        <div class="single-service flex flex-col">
+            <div class="flex justify-between mt-20  p-10">
+                <img src="<?= get_template_directory_uri(); ?>/images/cheers.svg" alt="cheers" />
+                <p class="text-[60px]">Service Title</p>
                 <img class="single-service-arrow" src="<?= get_template_directory_uri(); ?>/images/down-arrow-black.svg" alt="arrow-down" />
+            </div>
+            <div class="hidden-content hidden text-center">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                <a href="#" class="recent-projects-link flex justify-center gap-2 my-3">Check out our recent projects <img class="arrow-right" src="<?= get_template_directory_uri(); ?>/assets/arrow-right.svg" alt="arrow-right" /></a>
+            </div>
         </div>
         <hr class="border-b-[#49413D] border" />
     </div>
@@ -140,10 +160,10 @@ get_header();
     </section>
 
 <div class="board-section w-full bg-[#004F52] text-white flex justify-center overflow-hidden mt-[133px] pb-[133px]">
-    <div class="board-members flex justify-between space-x-10 max-w-[1440px] px-60 py-20">
+    <div class="board-members flex justify-between w-9/12 gap-5 max-w-[1440px] py-20">
        
         <div class="member-desciption text-center ">
-            <img src="<?= get_template_directory_uri(); ?>/images/Janet.svg" alt="Customer 1" class="rounded-md w-60 h-60 mx-auto" />
+            <img src="<?= get_template_directory_uri(); ?>/images/Janet.svg" alt="Customer 1" class="rounded-md sm:w-[340px] h-auto mx-auto" />
             <h2 class="text-2xl mt-4">Mugabekazi Janet</h2>
             <p class="text-sm">Managing partner - ABC Lawyers</p>
             <p class="mt-4 text-[#FFFFFF]">
@@ -154,7 +174,7 @@ get_header();
             </p>
         </div>
         <div class="member-desciption text-center ">
-            <img src="<?= get_template_directory_uri(); ?>/images/James.svg" alt="Customer 2" class="rounded-md w-60 h-60 mx-auto" />
+            <img src="<?= get_template_directory_uri(); ?>/images/James.svg" alt="Customer 2" class="rounded-md sm:w-[340px] h-auto mx-auto" />
             <h2 class="text-2xl mt-4">Mugabekazi Janet</h2>
             <p class="text-sm">Managing partner - ABC Lawyers</p>
             <p class="mt-4 text-[#FFFFFF]">
@@ -164,7 +184,7 @@ get_header();
             </p>
         </div>
         <div class="member-desciption text-center ">
-            <img src="<?= get_template_directory_uri(); ?>/images/cynthia.svg" alt="Customer 3" class="rounded-md w-60 h-60 mx-auto" />
+            <img src="<?= get_template_directory_uri(); ?>/images/cynthia.svg" alt="Customer 3" class="rounded-md sm:w-[340px] h-auto mx-auto" />
             <h2 class="text-2xl mt-4">Mugabekazi Janet</h2>
             <p class="text-sm">Managing partner - ABC Lawyers</p>
             <p class="mt-4 text-[#FFFFFF]">
@@ -202,6 +222,50 @@ get_header();
         </div>
     </div>
 </div>
+
+
+<script>
+
+    $(document).ready(function () {
+        $(".single-service").click(function () {
+            // Toggle the visibility of the hidden content
+            $(this).find('.hidden-content').slideToggle();
+        });
+    });
+
+  document.addEventListener('DOMContentLoaded', function () {
+
+      
+    // Create CountUp instances for each element
+    const countUp1 = new window.CountUp('count1', 30);
+    const countUp2 = new window.CountUp('count2', 20);
+    const countUp3 = new window.CountUp('count3', 20);
+    const countUp4 = new window.CountUp('count4', 100);
+
+    // Trigger animations when the element is in the viewport
+    const options = {
+      rootMargin: '0px',
+      threshold: 0.2,
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          countUp1.start();
+          countUp2.start();
+          countUp3.start();
+          countUp4.start();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    // Observe each stats element
+    document.querySelectorAll('.stats').forEach((stat) => {
+      observer.observe(stat);
+    });
+  });
+</script>
 
 
 
