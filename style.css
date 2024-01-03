@@ -11,7 +11,12 @@ Text Domain: twenty8
 */
 .event-container {
   margin-top: 7% !important;
+
+  h1{
+    margin-top: 47px;
+  }
 }
+
 .banner {
   border-radius: 20px;
   background: #f4f4f4;
@@ -30,7 +35,7 @@ Text Domain: twenty8
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   background: white;
-  padding: 20px;
+  padding: 80px;
   border-radius: 100%;
 }
 
@@ -131,8 +136,9 @@ Text Domain: twenty8
   font-weight: 400;
   line-height: normal;
 
-  
+
 }
+
 .section-text-title span {
   font-family: Poppins;
   font-size: 88px;
@@ -141,8 +147,8 @@ Text Domain: twenty8
   line-height: normal;
 }
 
-.text-orange{
-    color: var(--Yellow, #e7a362);
+.text-orange {
+  color: var(--Yellow, #e7a362);
 }
 
 .section-text p span.text-green {
@@ -177,9 +183,8 @@ Text Domain: twenty8
   width: 20%;
   height: 100%;
   padding-top: 40px;
-  img {
-    
-  }
+
+
 }
 
 /* our process section  */
@@ -301,7 +306,8 @@ Text Domain: twenty8
   padding-block: 40px;
   margin-top: 0px;
   padding-top: 0px;
-  padding-bottom: 0px;}
+  padding-bottom: 0px;
+}
 
 .contact-content {
   display: flex;
@@ -344,6 +350,7 @@ Text Domain: twenty8
 .contact-info a {
   color: inherit;
 }
+
 .contact-us .arrow-icon {
   width: 24px;
   vertical-align: middle;
@@ -396,22 +403,27 @@ p {
   flex-direction: column;
   align-items: center;
 }
+
 .testmoney-container h3 {
   color: #fff;
-  font-family: Poppins;
+  font-family: 'Poppins';
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
 
-.section-text-roundimage{
+.section-text-roundimage {
   position: absolute;
-    width: 16% !important;
-    top: 17% !important;
-    right: 5% !important;
+  width: 81% !important;
+  top: 8% !important;
+  right: 8% !important;
 }
 
+.contact-details {
+  display: flex !important;
+  flex-direction: row !important;
+}
 
 
 
@@ -419,30 +431,36 @@ p {
 
 @media screen and (max-width: 600px) {
 
-  .single-event{
+  .single-event {
     display: flex !important;
     flex-direction: column !important;
   }
-  .single-event-wrapper{
+
+  .single-event-wrapper {
     width: auto !important;
   }
+
   /* Home section */
   .home-container {
     display: flex;
     flex-direction: column;
   }
+
   .section-text {
     width: 100%;
   }
+
   .section-text-title,
   .section-text-title span,
   .section-text-desc,
   .section-text-desc span {
     font-size: 25px;
   }
+
   .section-text-img {
     width: 100%;
   }
+
   .section-text-roundimage {
     position: absolute;
     width: 20% !important;
@@ -451,7 +469,9 @@ p {
   }
 
   .image-container {
-    display: none;
+    width: 100%;
+    height: 51%;
+    padding-top: 0;
   }
 
   /* board-section */
@@ -460,12 +480,14 @@ p {
     margin-top: 0 !important;
     padding-bottom: 32px !important;
   }
+
   .board-members {
     padding: 0 !important;
     display: flex;
     flex-direction: column;
     margin-top: 4%;
   }
+
   .member-desciption {
     display: flex;
     flex-direction: column;
@@ -483,31 +505,38 @@ p {
     width: 100%;
     margin-top: 20px;
   }
+
   /* process-content */
   .our-process {
     margin-top: 20px;
   }
+
   .process-content {
     display: flex;
     flex-direction: column;
   }
+
   .process-column {
     width: 100%;
   }
+
   .bordered-column {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
+
   .arrow-right-icon {
     transform: rotate(90deg);
   }
+
   .arrow-container {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
   .process-description,
   .contact-section-description {
     margin-bottom: 2px;
@@ -539,6 +568,7 @@ p {
     p {
       font-size: 20px;
     }
+
     .arrow {
       width: 14%;
     }
@@ -549,6 +579,10 @@ p {
     transform: rotate(270deg);
   }
 
+  .badge {
+    display: none;
+  }
+
   /* stats-container */
 
   .stats-container {
@@ -556,82 +590,24 @@ p {
     flex-direction: column !important;
     margin-top: 20px;
   }
- 
+
+
+  p {
+    margin-top: 20px;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 
     p {
       margin-top: 20px;
     }
-    .stats {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
 
-      p{
-        margin-top: 20px;
-      }
-      h2{
-        font-size: 45px;
-      }
+    h2 {
+      font-size: 45px;
     }
-
-    /* contact-section */
-    .contact-section{
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-    .contact-details{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-    .contact-us {
-      margin-top: 0;
-      padding-block: 8px;
-
-      p{
-        font-size: 25px;
-      }
-    }
-    .contact-Whatsapp {
-      margin-top: 0;
-      padding-block: 8px;
-
-      p{
-        font-size: 25px;
-      }
-    }
-
-    /* footer-wrapper */
-    .footer-wrapper{
-      display: flex;
-      flex-direction: column;
-      gap: 50px;
-
-      img{
-        transform: rotate(360deg);
-      }
-    }
-
-
-    /* Event planning css */
-    .event-container{
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-      width: 100% !important;
-    }
-    .main-text{
-      font-size: 42px;
-    }
-  
-    .event-text img{
-      transform: rotate(360deg);
-    }
-  
-
-  .events-section .event-row{
-    display: flex !important;
-    flex-direction: column !important;
-    flex-wrap: nowrap !important;
   }
 
   /* contact-section */
@@ -639,11 +615,13 @@ p {
     margin-left: 20px;
     margin-right: 20px;
   }
+
   .contact-details {
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
     width: 100%;
   }
+
   .contact-us {
     margin-top: 0;
     padding-block: 8px;
@@ -652,6 +630,7 @@ p {
       font-size: 25px;
     }
   }
+
   .contact-Whatsapp {
     margin-top: 0;
     padding-block: 8px;
@@ -666,17 +645,87 @@ p {
     display: flex;
     flex-direction: column;
     gap: 50px;
+
+    img {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  /* Event planning css */
+  .event-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    width: 100% !important;
+  }
+
+  .main-text {
+    font-size: 42px;
+  }
+
+  .event-text img {
+    transform: rotate(360deg);
+  }
+
+
+  .events-section .event-row {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* contact-section */
+  .contact-section {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact-us {
+    margin-top: 0;
+    padding-block: 8px;
+
+    p {
+      font-size: 25px;
+    }
+  }
+
+  .contact-Whatsapp {
+    margin-top: 0;
+    padding-block: 8px;
+
+    p {
+      font-size: 25px;
+    }
+  }
+
+  .arrow-seperation {
+    margin-top: 0px !important;
+  }
+
+  /* footer-wrapper */
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .single-event{
+  .single-event {
     display: flex !important;
     flex-direction: column !important;
   }
-  .single-event-wrapper{
+
+  .single-event-wrapper {
     width: auto !important;
   }
+
   .section-text-title,
   .section-text-title span,
   .section-text-desc,
@@ -687,15 +736,16 @@ p {
   .section-text {
     width: 60%;
   }
+
   .section-img {
     height: 74%;
   }
 
   .section-text-roundimage {
     position: absolute;
-    width: 16% !important;
-    top: 17% !important;
-    right: 5% !important;
+    width: 79% !important;
+    top: 12% !important;
+    right: 9% !important;
   }
 
   .arrow-seperation {
@@ -709,6 +759,7 @@ p {
     flex-direction: column !important;
     margin-top: 20px !important;
   }
+
   .stats {
     display: flex;
     justify-content: center;
@@ -717,6 +768,7 @@ p {
     p {
       margin-top: 20px;
     }
+
     h2 {
       font-size: 45px;
     }
@@ -748,6 +800,7 @@ p {
     p {
       font-size: 20px;
     }
+
     .arrow {
       width: 14%;
     }
@@ -762,81 +815,50 @@ p {
   .our-process {
     margin-top: 20px;
   }
+
   .process-content {
     display: flex;
     flex-direction: column;
   }
+
   .process-column {
     width: 100%;
   }
+
   .bordered-column {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
+
   .arrow-right-icon {
     transform: rotate(90deg);
   }
+
   .arrow-container {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
   .process-description,
   .contact-section-description {
     margin-bottom: 2px;
   }
 
   /* contact-section */
-    .contact-section{
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-    .contact-details{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-    .contact-us {
-      margin-top: 0;
-      padding-block: 8px;
-
-      p{
-        font-size: 25px;
-      }
-    }
-    .contact-Whatsapp {
-      margin-top: 0;
-      padding-block: 8px;
-
-      p{
-        font-size: 25px;
-      }
-    }
-
-
-    .event-container {
-      width: 100% !important;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-    .event-row{
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      gap: 0px;
-    }
-    .event-text img{
-      transform: rotate(360deg);
-    }
-
+  .contact-section {
+    margin-left: 20px;
+    margin-right: 20px;
   }
+
   .contact-details {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
+
   .contact-us {
     margin-top: 0;
     padding-block: 8px;
@@ -845,6 +867,7 @@ p {
       font-size: 25px;
     }
   }
+
   .contact-Whatsapp {
     margin-top: 0;
     padding-block: 8px;
@@ -852,5 +875,53 @@ p {
     p {
       font-size: 25px;
     }
+  }
+
+
+  .event-container {
+    width: 100% !important;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .event-row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0px;
+  }
+
+  .event-text img {
+    transform: rotate(360deg);
+  }
+
+  .hero-img-container {
+    position: relative;
+    bottom: 35%;
+  }
+
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact-us {
+  margin-top: 0;
+  padding-block: 8px;
+
+  p {
+    font-size: 25px;
+  }
+}
+
+.contact-Whatsapp {
+  margin-top: 0;
+  padding-block: 8px;
+
+  p {
+    font-size: 25px;
   }
 }
