@@ -12,9 +12,6 @@ Text Domain: twenty8
 .event-container {
   margin-top: 7% !important;
 
-  h1{
-    margin-top: 47px;
-  }
 }
 
 .banner {
@@ -35,7 +32,7 @@ Text Domain: twenty8
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   background: white;
-  padding: 80px;
+  padding: 14px;
   border-radius: 100%;
 }
 
@@ -423,6 +420,11 @@ p {
 .contact-details {
   display: flex !important;
   flex-direction: row !important;
+}
+
+.contact-section{
+  margin-top: 7%;
+
 }
 
 
