@@ -2,16 +2,23 @@
 get_header();
 ?>
   <div class=" event-container w-9/12 m-auto">
-      <div class="banner">
-        <div class="badge">
-          <img src="<?= get_template_directory_uri(); ?>/assets/8-icon.svg" alt="Badge Image" />
-        </div>
-        <h1>
-          <span class="main-text">
-            Crafting Unforgettable <span class="highlighted">Moments</span>
-          </span>
-        </h1>
+  <div class="banner">
+    <?php
+    if (get_field('event_planning')) :
+      $event_planning_sec = get_field('event_planning');
+    ?>
+      <div class="badge">
+        <img src="<?= $event_planning_sec['image']['url'] ?>" alt="Badge Image" />
       </div>
+      <h1>
+        <span class="main-text">
+        <?= $event_planning_sec['main_text'] ?><span class="highlighted"><?= $event_planning_sec['highlighted_text'] ?></span>
+        </span>
+      </h1>
+
+    <?php endif; ?>
+
+  </div>
 
       <img class="arrow-icon" src="<?= get_template_directory_uri(); ?>/assets/arrow-down.svg" alt="Arrow Icon" />
 
