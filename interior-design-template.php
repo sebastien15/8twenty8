@@ -58,7 +58,10 @@ get_header();
 </div>
 
 
+<?php include(get_template_directory() . '/inc/process.php'); ?>
 
+
+<?php include(get_template_directory() . '/inc/contact.php'); ?>k 
 
 <?php
 get_footer();
