@@ -35,21 +35,21 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <header class="flex justify-between items-center py-4 px-6">
-		<a href="/" class="text-[#49413D] hover:text-gray-900"><img src="<?= get_template_directory_uri(); ?>/images/logo.svg" alt="Logo" class="w-76" /></a>
+		<img href="./home" src="<?= get_template_directory_uri(); ?>/images/logo.svg" alt="Logo" class="w-76" />
 		<nav class="flex-grow">
 			<ul class="flex justify-center space-x-4 text-lg">
 				<li>
-					<a href="./event-planning-template.php" class="text-[#49413D] hover:text-gray-900">Event Planning</a>
+					<a href="./event-planning" class="text-[#49413D] hover:text-gray-900">Event Planning</a>
 				</li>
 				<li>
-					<a href="./interior-design-template.php" class="text-[#49413D] hover:text-gray-900">Interior Design</a>
+					<a href="./interior-design" class="text-[#49413D] hover:text-gray-900">Interior Design</a>
 				</li>
 			</ul>
 		</nav>
 		<nav>
 			<ul class="flex space-x-4 text-lg">
 				<li>
-					<a href="./contact-us-template.php" class="text-[#49413D] hover:text-gray-900">Contact Us</a>
+					<a href="./contact-us" class="text-[#49413D] hover:text-gray-900">Contact Us</a>
 				</li>
 			</ul>
 		</nav>
