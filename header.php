@@ -35,7 +35,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <header class="flex justify-between items-center py-4 px-6">
-		<img src="<?= get_template_directory_uri(); ?>/images/logo.svg" alt="Logo" class="w-76" />
+		<a href="/" class="text-[#49413D] hover:text-gray-900"><img src="<?= get_template_directory_uri(); ?>/images/logo.svg" alt="Logo" class="w-76" /></a>
 		<nav class="flex-grow">
 			<ul class="flex justify-center space-x-4 text-lg">
 				<li>

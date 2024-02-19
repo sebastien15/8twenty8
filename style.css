@@ -32,8 +32,12 @@ Text Domain: twenty8
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   background: white;
-  padding: 14px;
+  padding: 100px;
   border-radius: 100%;
+}
+
+.event-container .badge{
+  padding: 14px;
 }
 
 .main-text {
@@ -917,7 +921,7 @@ p {
   width: 100%;
 }
 
-.contact-us {
+/* .contact-us {
   margin-top: 0;
   padding-block: 8px;
 
@@ -933,4 +937,13 @@ p {
   p {
     font-size: 25px;
   }
+} */
+
+.contact-us, .contact-email, .contact-Whatsapp {
+  margin-top: 0;
+  padding-block: 8px;
+}
+
+.contact-us p, .contact-email p, .contact-Whatsapp p {
+  font-size: 25px;
 }
