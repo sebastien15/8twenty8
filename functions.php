@@ -149,6 +149,8 @@ function twenty8_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'twenty8_scripts' );
 
+
+
 /**
  * Implement the Custom Header feature.
  */
