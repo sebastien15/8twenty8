@@ -14,15 +14,27 @@
 
 //  $homepageId = get_id_by_slug("home");
 
+// Get the home page object by its path
+$home_page = get_page_by_path("home");
+
+// Check if the home page exists
+if ($home_page) {
+    // Get the ID of the home page
+    $home_page_id = $home_page->ID;
+} else {
+    // Handle the case when the home page is not found
+    echo "Error: Home page not found.";
+    // Optionally, you can provide further instructions or fallback content here
+    // For example: include('fallback-header.php');
+    exit; // Stop further execution
+}
 
 ?>
-
-
-
 <footer class="footer-section mt-20">
     <?php
-    if (get_field('footer')) :
-        $footer_sec = get_field('footer');
+    if (get_field('footer', $home_page_id)) :
+        $footer_sec = get_field('footer', $home_page_id);
+        
     ?>
         <div class="footer-wrapper mx-auto flex w-9/12 m-auto items-center justify-between py-16 ">
             <img src="<?= $footer_sec['logo']['url'] ?>" />

@@ -84,7 +84,7 @@ if (get_field('about')) :
 </div>
 
 
-<div class="services-section bg-[#F4F4F4] border border-none rounded-t-xl pt-10 mt-[84px] w-full" style="background: #F4F4F4;">
+<div class="services-section bg-[#F4F4F4] border border-none rounded-t-xl pt-10 mt-[84px] w-full" style="background: #F4F4F4; border-top-right-radius:50px; border-top-left-radius: 50px;">
 
     <?php
     if (get_field('services_section')) :
@@ -106,13 +106,16 @@ if (get_field('about')) :
                     <div class="flex justify-between mt-20  p-10">
                         <img src="<?= $services_sec['image']['url'] ?>" alt="interior design" />
                         <p class="text-[60px]"><?= $services_sec['service_title'] ?></p>
-                        <img class="single-service-arrow" class="arrow" src="<?= get_template_directory_uri(); ?>/images/down-arrow-black.svg" alt="arrow-down" />
+                            <img class="single-service-arrow" class="arrow" src="<?= get_template_directory_uri(); ?>/images/down-arrow-black.svg" alt="arrow-down" />
 
                     </div>
 
                     <div class="hidden-content hidden text-center">
                         <p><?= $services_sec['description'] ?></p>
-                        <a href="#" class="recent-projects-link flex justify-center gap-2 my-3"><?= $services_sec['check_recent_project'] ?> <img class="arrow-right" src="<?= get_template_directory_uri(); ?>/assets/arrow-right.svg" alt="arrow-right" /></a>
+                        <a href="#" class="recent-projects-link flex justify-center gap-2 my-3">
+                            <p class="text-[20px]"><?= $services_sec['check_recent_project'] ?> </p>
+                            <img class="arrow-right" src="<?= get_template_directory_uri(); ?>/assets/arrow-right.svg" alt="arrow-right" />
+                        </a>
                     </div>
                 </div>
                 <hr class="border-b-[#49413D] border" />
@@ -145,7 +148,7 @@ if (get_field('about')) :
                 <div class="member-desciption text-center ">
                     <img src="<?= $board_section_sec['image']['url'] ?>" alt="Customer 1" class="rounded-md sm:w-[340px] h-auto mx-auto" />
                     <h2 class="text-2xl mt-4"><?= $board_section_sec['name'] ?></h2>
-                    <p class="text-sm text-[#FFFFFF] mt-2" ><?= $board_section_sec['title'] ?></p>
+                    <p class="text-sm text-[#FFFFFF] mt-2"><?= $board_section_sec['title'] ?></p>
                     <p class="mt-4 text-[#FFFFFF]">
                         <?= $board_section_sec['description'] ?>
 

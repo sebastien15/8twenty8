@@ -191,7 +191,7 @@ Text Domain: twenty8
 /* our process section  */
 
 .our-process {
-  background: #f4f4f4;
+  /* background: #f4f4f4; */
   padding-block: 40px;
   margin-top: 100px;
 }
@@ -299,6 +299,10 @@ Text Domain: twenty8
   font-weight: 300;
   line-height: 24px;
   margin: 0;
+}
+
+.single-service-arrow{
+  cursor: pointer;
 }
 
 /* contact us section  */
