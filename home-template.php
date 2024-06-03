@@ -103,17 +103,17 @@ if (get_field('about')) :
             foreach ($services as $services_sec) :
             ?>
                 <div class="single-service flex flex-col">
-                    <div class="flex justify-between mt-20  p-10">
+                    <div class="flex justify-between mt-20  p-10 gap-8">
                         <img src="<?= $services_sec['image']['url'] ?>" alt="interior design" />
                         <p class="text-[60px]"><?= $services_sec['service_title'] ?></p>
-                            <img class="single-service-arrow" class="arrow" src="<?= get_template_directory_uri(); ?>/images/down-arrow-black.svg" alt="arrow-down" />
+                        <img class="single-service-arrow" class="arrow" src="<?= get_template_directory_uri(); ?>/images/down-arrow-black.svg" alt="arrow-down" />
 
                     </div>
 
                     <div class="hidden-content hidden text-center">
                         <p><?= $services_sec['description'] ?></p>
-                        <a href="#" class="recent-projects-link flex justify-center gap-2 my-3">
-                            <p class="text-[20px]"><?= $services_sec['check_recent_project'] ?> </p>
+                        <a href="<?= $services_sec['check_recent_project'] ?>" class="recent-projects-link flex justify-center gap-2 my-3">
+                            <p class="text-[40px]">Go to </p>
                             <img class="arrow-right" src="<?= get_template_directory_uri(); ?>/assets/arrow-right.svg" alt="arrow-right" />
                         </a>
                     </div>
@@ -168,7 +168,7 @@ if (get_field('about')) :
 
 
 
-<script>
+<!-- <script>
     $(document).ready(function() {
         $(".single-service").click(function() {
             // Toggle the visibility of the hidden content
@@ -208,9 +208,153 @@ if (get_field('about')) :
             observer.observe(stat);
         });
     });
+</script> -->
+
+
+<script>
+    $(document).ready(function() {
+        $(".single-service").click(function() {
+            // Toggle the visibility of the hidden content within the clicked .single-service
+            $(this).find('.hidden-content').slideToggle();
+
+            // Toggle the arrow direction
+            $(this).find('.single-service-arrow').toggleClass('rotated');
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Create CountUp instances for each element
+        const countUp1 = new window.CountUp('count1', 30);
+        const countUp2 = new window.CountUp('count2', 20);
+        const countUp3 = new window.CountUp('count3', 20);
+        const countUp4 = new window.CountUp('count4', 100);
+
+        // Trigger animations when the element is in the viewport
+        const options = {
+            rootMargin: '0px',
+            threshold: 0.2,
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    countUp1.start();
+                    countUp2.start();
+                    countUp3.start();
+                    countUp4.start();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        // Observe each stats element
+        document.querySelectorAll('.stats').forEach((stat) => {
+            observer.observe(stat);
+        });
+    });
+
+    function toggleContent(arrow) {
+        const parent = arrow.closest('.single-service');
+        const hiddenContent = parent.querySelector('.hidden-content');
+        const allArrows = document.querySelectorAll('.single-service-arrow');
+        const allContents = document.querySelectorAll('.hidden-content');
+
+        // Remove 'active' class from all arrows and hide all contents
+        allArrows.forEach(arw => arw.classList.remove('active'));
+        allContents.forEach(content => content.classList.remove('show'));
+
+        // Toggle 'active' class for the clicked arrow and show corresponding content
+        arrow.classList.toggle('active');
+        hiddenContent.classList.toggle('show');
+    }
 </script>
 
+<style>
+    .single-service-arrow {
+        transition: transform 0.3s ease;
+    }
 
+    .single-service-arrow.rotated {
+        transform: rotate(180deg);
+    }
+
+    .single-service-arrow {
+        cursor: pointer;
+        max-width: 40px;
+        transition: transform 0.3s, max-width 0.3s;
+    }
+
+    .single-service-arrow.active {
+        transform: scale(1.2);
+        max-width: 60px;
+    }
+
+    .hidden-content {
+        display: none;
+    }
+
+    .hidden-content.show {
+        display: block;
+    }
+</style>
+
+<style>
+    /* General styles for single service */
+    .single-service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    } */
+/* 
+    .text-[60px] {
+        font-size: 60px;
+        word-wrap: break-word;
+        white-space: normal;
+        line-height: 1.2;
+        font-weight: bold;
+    } */
+
+    /* Responsive adjustments */
+    /* @media (max-width: 768px) {
+        .text-[60px] {
+            font-size: 40px;
+        }
+    } */
+/* 
+    @media (max-width: 480px) {
+        .text-[60px] {
+            font-size: 30px;
+        }
+    } */
+
+    /* Arrow styles */
+    .single-service-arrow {
+        cursor: pointer;
+        max-width: 40px;
+        transition: transform 0.3s, max-width 0.3s;
+    }
+
+    .single-service-arrow.active {
+        transform: scale(1.2);
+        max-width: 60px;
+    }
+
+    /* Hidden content */
+    .hidden-content {
+        display: none;
+    }
+
+    .hidden-content.show {
+        display: block;
+    }
+</style>
 
 <?php
 get_footer();

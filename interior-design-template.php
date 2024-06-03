@@ -13,7 +13,7 @@ get_header();
       </div>
       <h1>
         <span class="main-text">
-        <?= $interior_design_sec['title'] ?> <span class="highlighted"><?= $interior_design_sec['min_title'] ?></span>
+          <?= $interior_design_sec['title'] ?> <span class="highlighted"><?= $interior_design_sec['min_title'] ?></span>
         </span>
       </h1>
 
@@ -23,38 +23,42 @@ get_header();
 
   <img class="arrow-icon" src="<?= get_template_directory_uri(); ?>/assets/arrow-down.svg" alt="Arrow Icon" />
 
+
+
   <section class="events-section">
     <div class="event-row">
-      <div class="event-column mt-8">
-        <img class="event-image" src="<?= get_template_directory_uri(); ?>/assets/event-image-1.png" alt="Event Image" />
-        <a class="event-text">
-          Event 1 Description
-          <img class="arrow-right-icon" src="<?= get_template_directory_uri(); ?>/assets/arrow-right.svg" alt="Arrow Right" />
-        </a>
-      </div>
-      <div class="event-column mt-8">
-        <img class="event-image" src="<?= get_template_directory_uri(); ?>/assets/event-image-2.png" alt="Event Image" />
-        <a class="event-text">
-          Event 2 Description
-          <img class="arrow-right-icon" src="<?= get_template_directory_uri(); ?>/assets/arrow-right.svg" alt="Arrow Right" />
-        </a>
-      </div>
-      <div class="event-column mt-8">
-        <img class="event-image" src="<?= get_template_directory_uri(); ?>/assets/event-image-3.png" alt="Event Image" />
-        <a class="event-text">
-          Event 3 Description
-          <img class="arrow-right-icon" src="<?= get_template_directory_uri(); ?>/assets/arrow-right.svg" alt="Arrow Right" />
-        </a>
-      </div>
-      <div class="event-column mt-8">
-        <img class="event-image" src="<?= get_template_directory_uri(); ?>/assets/event-image-3.png" alt="Event Image" />
-        <a class="event-text">
-          Event 3 Description
-          <img class="arrow-right-icon" src="<?= get_template_directory_uri(); ?>/assets/arrow-right.svg" alt="Arrow Right" />
-        </a>
-      </div>
+      <?php
+
+      $args = array(
+        'post_type' => 'post',  // Query for posts
+        'posts_per_page' => -1,
+      );
+
+      $posts = new WP_Query($args);
+      if ($posts->have_posts()) {
+        while ($posts->have_posts()) {
+          $posts->the_post();
+      ?>
+          <div class="event-column mt-8">
+            <a href="<?php the_permalink(); ?>">
+              <img class="event-image" src="<?= get_the_post_thumbnail_url(); ?>" alt="<?= the_title(); ?>" />
+              <div class="event-text">
+                <?php the_title('<h2>', '</h2>'); ?>
+                <img class="arrow-right-icon" src="<?= get_template_directory_uri(); ?>/assets/arrow-right.svg" alt="Arrow Right" />
+              </div>
+            </a>
+          </div>
+      <?php
+        }
+        wp_reset_postdata(); // Reset post data
+      } else {
+        echo 'No posts found.';
+      }
+      ?>
     </div>
   </section>
+
+ 
 </div>
 
 
